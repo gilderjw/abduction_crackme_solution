@@ -33,23 +33,21 @@ def get_jump_addrs(function_list):
   return instructions
 
 def get_func_dump(addr=ScreenEA()):
-  # f = open("D:\\Documents\\Actual_Documents\\school\\school\\reveng_independant_study\\abduction_keygenme\\newdump.asm", "wb")
-
   (used_functions, lib_funcs) = get_all_functions(addr)
   jump_addrs = get_jump_addrs(used_functions)
 
-  print map(GetFunctionName, used_functions|lib_funcs)
+  print map(GetFunctionName, used_functions)
+  
+  print("---Begin Disassembly---")
+
+  print("section .text")
+
+
+  for lib_func in map(GetFunctionName, lib_funcs):
+    print("extern %s" % lib_func)
 
   for func in used_functions:
     idc.Eval("gen_nasm(0x%x);" % func)
-    # if (GetFunctionName(func) != ''):
-      # f.write("\n" + GetFunctionName(func) + ":\n")
-      # for item in FuncItems(func):
-      #   if (item in jump_addrs):
-          # f.write("\nloc_%X:\n" % item)
-        # f.write(GetDisasm(item) + "\n")
-  print("done.\n")
-  # f.close()
 
-# for function in get_all_functions(ScreenEA()):
-#   idc.Eval("gen_nasm(0x%x);" % function)
+  print("\nsection .data")
+  print("\n---End Disassembly---")
