@@ -1,6 +1,6 @@
 *.o
 *.lib
 *.obj
-*.exe
 *.idb
+keygen.exe
 keygen

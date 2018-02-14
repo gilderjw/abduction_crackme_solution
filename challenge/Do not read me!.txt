@@ -1,0 +1,32 @@
+/ Abduction Crackme \
+\    by sd333221    /
+/ as the 23.10.07   \
+\   Level 3.5/10    /
+|||||||||||||||||||||
+
+In this crackme i use new technologies I learned, to make your life as
+a cracker very hard.
+
+I coded it, as I would code a software, I want to protect (expect that
+I didn't use a strong protector).
+
+There are several anti-debug tricks to beat your debugger up,
+I avoided to make it crash your system but I don't take any responsabilities for that.
+
+Rules:
+- Break the Security
+- Recover the unlock key - For a username you want,
+  but this task is not enough for a valid solution it is
+  just for noobs since you can get the serial directly
+- Do not patch or selfgen
+- Make a Keygen
+- Write a tutorial
+
+Enjoy the intro,
+>>you can skip it by selecting it and pressing Alt+F4<<
+
+
+I hope you enjoy it!
+
+Greetings
+sd333221
