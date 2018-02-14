@@ -1,5 +1,17 @@
 section .text
 
+%ifdef WINDOWS
+   %define memset                    _memset
+   %define strlen                    _strlen
+   %define memcpy                    _memcpy
+   %define strncat                   _strncat
+   %define strcmp                    _strcmp
+   %define toupper                   _toupper
+   %define __strdup                  _strdup
+   %define sprintf                   _sprintf
+   %define interesting_hash_stuff   _interesting_hash_stuff
+%endif
+
 extern memset
 extern strlen
 extern memcpy
@@ -9,7 +21,7 @@ extern toupper
 extern __strdup
 extern sprintf
 
-global _interesting_hash_stuff
+global interesting_hash_stuff
 
 _hash_function:
    push    ebp
@@ -1640,7 +1652,7 @@ loc_40D135:
    mov     esp, ebp
    pop     ebp
    retn    
-_interesting_hash_stuff:
+interesting_hash_stuff:
    push    ebp
    mov     ebp, esp
    sub     esp, 110h

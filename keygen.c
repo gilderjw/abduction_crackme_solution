@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     return 1;
   }
 
-  char *lol = _interesting_hash_stuff((char*) argv[1]);
+  char *lol = interesting_hash_stuff((char*) argv[1]);
 
   printf("%s\n", lol);
 
